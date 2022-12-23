@@ -26,7 +26,14 @@ public class Homepage{
 
 		Thread.sleep(8000);
 
-
+		// driver.findElement(By.xpath("(//*[local-name()='a' and @href='/services'])[5]")).click();
+		
+		
+		
+		
+		
+		
+      
 		//	driver.findElement(By.xpath("(//*[local-name()='a' and @href='/services'])[5]")).click();
 		//	driver.findElement(By.xpath("//*[local-name()='a' and @href='/services'])[3]")).click();
 		//	driver.findElement(By.xpath("(//a[@class='readon blue-slide'])[1]")).click();

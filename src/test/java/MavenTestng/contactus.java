@@ -1,6 +1,9 @@
 package MavenTestng;
 
+import java.io.IOException;
+
 import org.openqa.selenium.By;
+import org.openqa.selenium.InvalidArgumentException;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -11,7 +14,7 @@ public class contactus {
 	public contactus(WebDriver driver) {
 		this.driver = driver;	
 	}
-	public void Contactus()  throws InterruptedException  {
+	public void Contactus()  throws InterruptedException, IOException   {
 		driver.findElement(By.xpath("//a[@href='/getaenquiry']")).click();
 		driver.findElement(By.xpath("(//a[@href=\"/team\"])[1]")).click();
 		JavascriptExecutor js = (JavascriptExecutor) driver;
@@ -61,18 +64,20 @@ public class contactus {
 		driver.findElement(By.xpath("//input[@type='tel']")).sendKeys("8982455535");
 		Thread.sleep(1000);
 		driver.findElement(By.xpath("//input[@name='position']")).sendKeys("management");
-		js.executeScript("window.scrollBy(0,300)", "");
-     	Thread.sleep(1000);
-    // 	WebElement choosefile = driver.findElement(By.xpath("//input[@type='file']"));
-     	WebElement choosefile = driver.findElement(By.cssSelector("span[class='wpcf7-form-control-wrap resume']"));
-     	choosefile.click();
+	    js.executeScript("window.scrollBy(0,250)", "");
      	Thread.sleep(2000);
+    
+        WebElement choosefile = driver.findElement(By.xpath("//span[@class='wpcf7-form-control-wrap resume']"));                                                                                                                                          
+        choosefile.click();
+        Thread.sleep(4000);
+        
+       
+     	Runtime.getRuntime().exec("C:\\use\\hp\\eclipse-workspace\\Maven-Testng\\autoit file\\fileupload.exe");
+     
      	
-		choosefile.sendKeys("D:/Javed_latest.pdf");	
-		
 		Thread.sleep(2000);
-		
-
+	
+ 
 
 	}}
 

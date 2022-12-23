@@ -6,6 +6,7 @@
       <class name="MavenTestng.StepDefination">
         <methods>
           <include name="contactus"/>
+          <include name="Homepage"/>
           <include name="Setup"/>
         </methods>
       </class> <!-- MavenTestng.StepDefination -->

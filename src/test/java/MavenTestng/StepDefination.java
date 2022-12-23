@@ -1,5 +1,7 @@
 package MavenTestng; 
 
+import java.io.IOException;
+
 import org.checkerframework.checker.units.qual.Time;
 import org.junit.experimental.theories.suppliers.TestedOn;
 import org.junit.rules.TestName;
@@ -66,8 +68,8 @@ public class StepDefination {
 //    	 letsconnect.Letsconnectpage();
 //     }
     
-     @Test(priority=0)
-     public void contactus()throws  InterruptedException {
+     @Test(priority=1)
+     public void contactus()throws  InterruptedException, IOException {
     	 Contactus.Contactus();
     }
    
@@ -76,11 +78,11 @@ public class StepDefination {
 //		weare.WeArepage();
 //		
 //     }
-//	@Test(priority=3)
-//	 public void Homepage()throws  InterruptedException {
-//		 homepage.Homepage();
-//	
-//}
+	@Test(priority=0)
+	 public void Homepage()throws  InterruptedException {
+		 homepage.Homepage();
+	
+}
 //    
 //	@Test(priority=6)
 //	 public void Blogs()throws  InterruptedException {
